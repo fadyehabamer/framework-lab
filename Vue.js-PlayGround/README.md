@@ -1,8 +1,11 @@
-<p align="center">
-  <img src="Logo.png">
-</p>
-  
-<h1 align="center"> Vue.js </h1>
-<h3 align="center"> Detailed code for using Vue.js </h3>
+# Vue.js-PlayGround
 
-<hr>
+Trying to use VUE JS
+
+### 🔗 [View Live Demo](https://fadyehabamer.github.io/framework-lab/Vue.js-PlayGround/)
+
+**Built with:** JavaScript
+**Topics:** `vuejs`, `crash-course`, `vue`
+
+---
+↩ Part of the [**framework-lab**](../) collection · [all collections](https://github.com/fadyehabamer?tab=repositories) · [@fadyehabamer](https://github.com/fadyehabamer)

@@ -1,8 +1,11 @@
-# Non Rectangular header
-> using Clip-path property
+# Non-Rectangular-Header
 
-```css
-  clip-path: circle(180vh at 50% -92vh);
-```
-## Clip-path Generator 
-[Clippy](https://bennettfeely.com/clippy)
+Non Rectangular header
+
+### 🔗 [View Live Demo](https://fadyehabamer.github.io/framework-lab/Non-Rectangular-Header/)
+
+**Built with:** CSS
+**Topics:** `circle`, `header`, `clip-path`
+
+---
+↩ Part of the [**framework-lab**](../) collection · [all collections](https://github.com/fadyehabamer?tab=repositories) · [@fadyehabamer](https://github.com/fadyehabamer)
