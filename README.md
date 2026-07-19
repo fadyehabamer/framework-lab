@@ -8,7 +8,7 @@
 |------|-------------|---------|
 | [`MonsterSlayer-VueJSGame`](./MonsterSlayer-VueJSGame/) | Simple Game built with vue.js ( Without CLI ) | [🔗 Live](https://fadyehabamer.github.io/framework-lab/MonsterSlayer-VueJSGame/) |
 | [`Non-Rectangular-Header`](./Non-Rectangular-Header/) | Non Rectangular header | [🔗 Live](https://fadyehabamer.github.io/framework-lab/Non-Rectangular-Header/) |
-| [`Vue.js-PlayGround`](./Vue.js-PlayGround/) | Trying to use VUE JS | [🔗 Live](https://fadyehabamer.github.io/framework-lab/Vue.js-PlayGround/Advanced Vuejs/05- Rendering Conditional content and lists/) |
+| [`Vue.js-PlayGround`](./Vue.js-PlayGround/) | Trying to use VUE JS | [🔗 Live](https://fadyehabamer.github.io/framework-lab/Vue.js-PlayGround/) |
 
 ---
 
