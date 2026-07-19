@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.JS</title>
+</head>
+
+<style>
+
+</style>
+
+
+<body>
+    <div id="app">
+        <!--* inline style -->
+        <div :style=" ' color:red; ' " > red Test Text </div>
+        
+        <!-- * variable with style -->
+        <div :style=" bluetext " > blue Test Text </div>
+        
+        <!-- * with object  -->
+        <div :style=" {color:'white' , background :greenbck } " > object Test Text </div>
+    
+        <!-- * with array -->
+        <div :style="[ blackbck_whitetext,twentyfont ]" > array Test Text </div>
+
+        <!-- * with computed var -->
+        <div :style="{ 'font-size':size +'px' }" > computed Test Text </div>
+        <br>
+        <button @click="size++" > increase computed font size by 1 </button>
+        <button @click="size--" > decrease computed font size by 1 </button>
+        
+    </div>
+
+
+
+    <!-- LOCAL FILE -->
+    <script src="vue.js"></script>
+
+    <!-- main.js -->
+    <script src="main.js"></script>
+</body>
+
+</html>

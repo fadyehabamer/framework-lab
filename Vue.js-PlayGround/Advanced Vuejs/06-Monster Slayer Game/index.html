@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vue Basics</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/vue@next" defer></script>
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <h1>Monster Slayer</h1>
+    </header>
+    <div id="game">
+      <section id="monster" class="container">
+        <h2>Monster Health</h2>
+        <div class="healthbar">
+          <div class="healthbar__value" :style="monsterBar"></div>
+        </div>
+      </section>
+      <section id="player" class="container">
+        <h2>Your Health</h2>
+        <div class="healthbar">
+          <div class="healthbar__value" :style="playerBar"></div>
+        </div>
+      </section>
+
+      <section class="container" v-if="winner">
+        <h1>GAME OVER !</h1>
+        <h2 v-if="winner == 'draw'">IT IS A DRAW !</h2>
+        <h2 v-else-if="winner == 'player'">PLAYER WINS 👨🙍‍♂️🙋‍♂️</h2>
+        <h2 v-if="winner == 'monster'">MONSTER WINS 👽👾💥</h2>
+        <button @click="startNewGame">START NEW GAME</button>
+      </section>
+
+      <section id="controls" v-if="!winner">
+        <!-- OR USE v-else -->
+        <button @click="attackMonster">ATTACK</button>
+        <button :disabled="disableSpecialAttack" @click="specialAttackMonster">
+          SPECIAL ATTACK
+        </button>
+        <button @click="healPlayer">HEAL</button>
+        <button @click="surrender">SURRENDER</button>
+      </section>
+      <section id="log" class="container">
+        <h2>Battle Log</h2>
+        <ul>
+          <li v-for="msg in logMsgs">
+
+            <span :class="{'log--player': msg.actionBy === 'Player', 'log--monster': msg.actionBy === 'Monster'}">
+
+              {{msg.actionBy === 'Player' ? 'PLAYER' : 'MONSTER'}}
+
+            </span>
+            -
+            <span v-if="msg.actionType == 'Heal'" class="log--heal">
+              heals himself by <span> {{msg.actionValue}} </span></span
+            >
+            <span class="log--damage" v-else>
+              attacks and deals <span> {{msg.actionValue}} </span>
+            </span>
+          </li>
+        </ul>
+      </section>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.JS</title>
+</head>
+
+<style>
+    .rect {
+        width: 100px;
+        height: 100px;
+    }
+
+    .red {
+        background-color: red;
+    }
+
+    .blue {
+        background-color: blue;
+    }
+    .has-border{
+        border: 2px solid black;
+    }
+</style>
+
+
+<body>
+    <div id="app">
+        <!-- 
+            * give red class using vue.js (basic way)
+         -->
+        <div class="rect" v-bind:class="'red'"></div>
+
+
+        <br>
+
+        <!--
+            * give blue class using object
+         -->
+        <!-- <div class="rect" v-bind:class=" {blue:active,red:!active} "></div> -->
+
+         <!-- 
+             * give class using computed
+          -->
+          <div class="rect" :class="activeclass"></div>
+
+        <!-- 
+            * toggle class btn
+         -->
+
+        <br>
+
+         <button @click="active=!active" > toggle 2nd div color  </button>
+    </div>
+
+
+
+    <!-- LOCAL FILE -->
+    <script src="vue.js"></script>
+
+    <!-- main.js -->
+    <script src="main.js"></script>
+</body>
+
+</html>

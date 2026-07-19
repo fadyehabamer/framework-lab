@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.JS</title>
+</head>
+
+<body>
+    <div id="app">
+
+        <!-- 
+            * vue.js can track changes in mutation methods :
+                * pop , sort , reverse , splice , slice
+         -->
+        <!-- 
+             * array , list
+          -->
+        <div style="border: 1px solid red;padding: 10px;  margin-bottom: 10px;">
+            <div v-for="item in list">
+                {{item}}
+            </div>
+
+            <!-- * changes will be tracked -->
+            <button @click="addTen"> ADD 10 </button>
+            <button @click="changeList"> Change whole List </button>
+
+            <!-- * changes will be untracked -->
+            <button @click="change3rd"> change third element </button>
+        </div>
+
+        <!-- 
+            * object
+         -->
+        <div style="border: 1px solid red;padding: 10px;">
+            <div v-for="(info , key) in user" > 
+                {{key}} : {{info}}
+            </div>
+            <button @click="addNewDatatoObj" > add age </button>
+        </div>
+    </div>
+
+
+
+    <!-- LOCAL FILE -->
+    <script src="vue.js"></script>
+
+    <!-- main.js -->
+    <script src="main.js"></script>
+</body>
+
+</html>

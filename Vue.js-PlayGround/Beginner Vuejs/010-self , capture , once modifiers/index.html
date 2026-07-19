@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.JS</title>
+</head>
+
+<body>
+    <div id="app">
+        <!-- when hover on rect 2 , rect2() + rect1() will operate
+           * .self for outer element (oposite to stop)
+           * . capture -> will reverse oreder of operation for functions
+           * .once -> wil operate event only once
+            
+        -->
+        <div v-on:mouseover.capture="rect1" style="background-color: blue; width: 200px; height: 200px;" >
+            
+            <div v-on:mouseover="rect2" style="background-color: red; width: 100px; height: 100px; " >
+
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- LOCAL FILE -->
+    <script src="vue.js"></script>
+
+    <!-- main.js -->
+    <script src="main.vue"></script>
+
+</body>
+
+</html>

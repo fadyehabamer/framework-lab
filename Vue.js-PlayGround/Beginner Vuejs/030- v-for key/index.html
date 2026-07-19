@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.JS</title>
+</head>
+
+    <style>
+        .error input{
+            border: 5px solid red;
+        }
+    </style>
+
+<body>
+    <div id="app">
+
+        <!-- 
+            * to solve index switch problem -> :key="index" (default)
+            * key must be unique to use
+        -->
+        <div v-for="(user,index) in users" :key="user.name" id="first">
+            <input type="text" v-model="user.name" >
+            <hr>
+        </div>
+
+        <button @click="reverseusers" >Reverse Users</button>
+        <button @click="addClasstoFirst" >Add class to 1st input</button>
+    </div>
+
+
+
+    <!-- LOCAL FILE -->
+    <script src="vue.js"></script>
+
+    <!-- main.js -->
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.JS</title>
+</head>
+
+<style>
+
+</style>
+
+
+<body>
+    <div id="app">
+        <!-- 
+            * act as for each loop
+            * simple todo app 
+         -->
+        <div style="border: 1px solid red;padding: 10px;">
+            <div v-for="item in list">
+                <div v-text="item"> </div>
+            </div>
+            <br>
+
+            <input v-model="newValue" type="text">
+            <br>
+            <br>
+            <button @click="addItem"> Add Item to first list </button>
+        </div>
+
+        <br>
+        <br>
+
+        <div style="padding: 10px;border: 1px solid red;">
+            <div v-for="(user , index) in userInfo">
+                <span>Name : {{user.name}} , Age : {{user.age}} , address : {{user.address}}
+                <button @click="deleteItem(index)" > DELETE THIS </button>
+                </span>
+    
+            </div>
+        </div>
+
+
+
+    </div>
+
+
+
+    <!-- LOCAL FILE -->
+    <script src="vue.js"></script>
+
+    <!-- main.js -->
+    <script src="main.js"></script>
+</body>
+
+</html>

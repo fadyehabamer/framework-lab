@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.JS</title>
+</head>
+
+<body>
+    <div id="app">
+      
+            <!-- 
+                !! keyboard -> keyup , mouse -> click
+                * .ctrl.enter -> function will operate when user click on ctrl + enter key 
+                * .shift -> shift key
+                * .meta -> windows key or command key for mac os
+                * .click.left -> left click of mouse
+             -->
+            <input v-on:click.left="handlekey" type="text">
+ 
+
+    </div>
+
+
+
+    <!-- LOCAL FILE -->
+    <script src="vue.js"></script>
+
+    <!-- main.js -->
+    <script src="main.vue"></script>
+</body>
+
+</html>

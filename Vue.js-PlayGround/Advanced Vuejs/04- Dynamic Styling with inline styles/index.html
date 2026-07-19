@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vue Basics</title>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://unpkg.com/vue@next" defer></script>
+  <script src="app.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Vue Dynamic Styling</h1>
+  </header>
+  <section id="styling">
+    <h2>
+      INLINE STYLING
+    </h2>
+    <div @click="inlineBoxSelected('A')" :style="{borderColor : inlineBoxA ? 'red' : '#ccc' }" class="demo"></div>
+    <div @click="inlineBoxSelected('B')" :style="{borderColor : inlineBoxB ? 'red' : '#ccc' }" class="demo"></div>
+    <div @click="inlineBoxSelected('C')" :style="{borderColor : inlineBoxC ? 'red' : '#ccc' }" class="demo"></div>
+
+    <hr>
+    <h2>
+      CLASSES DYNAMICALLY
+    </h2>
+    <div @click="classboxSelected('A')" :class="classBoxA ? 'demo active' : 'demo'"></div>
+    <div @click="classboxSelected('B')" :class="classBoxB ? 'demo active' : 'demo'"></div>
+    <!-- * shorthanded -->
+    <div @click="classboxSelected('C')" :class="{demo:true, active:classBoxC }"></div>
+
+    <hr>
+
+    <h2>
+      Computed Class
+    </h2>
+    <!-- * must include default class="..." -->
+    <!-- <div @click="computedBoxSelected('A')" class="demo" :class="computedClassBox"></div> -->
+
+    <!-- * or => array of binded classes  -->
+    <div @click="computedBoxSelected('A')" :class="['demo',computedClassBox]"></div>
+
+  </section>
+</body>
+
+</html>

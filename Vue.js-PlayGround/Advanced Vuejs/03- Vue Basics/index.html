@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vue Basics</title>
+  <link href="https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <script src="https://unpkg.com/vue@next" defer></script>
+  <script src="app.js" defer></script>
+</head>
+
+<body>
+  <header>
+    <h1>Vue Course Goals</h1>
+  </header>
+  <section id="user-goal">
+    <h2>My Course Goal</h2>
+    <!-- * interpolation -->
+    <p>{{coursegoal}}</p>
+
+    <!-- * V-bind Directive -->
+    <p> Here is my <a v-bind:href="GithubLink">Github Page</a> </p>
+
+    <!-- * Methods -->
+    <p> {{methodsGoal()}} </p>
+
+    <!-- * Dynamic method using data -->
+    <p> {{dynamicData()}} </p>
+
+    <!-- * Some HTML CODE -->
+    <p v-html="htmlCode"></p>
+
+
+    <h2>Events</h2>
+    <!-- * Counter app -->
+    <p>
+      COUNTER APP 1 // using functions
+      <br>
+      {{counter1}}
+      <br>
+      <button v-on:click="incCounter()">Add</button>
+      <button v-on:click="decCounter()">Minus</button>
+    </p>
+
+    <p>
+      COUNTER APP 2 // without functions
+      <br>
+      {{counter2}}
+      <br>
+      <button v-on:click="this.counter2++">Add</button>
+      <button v-on:click="this.counter2--">Minus</button>
+    </p>
+
+    <!-- * Arrguments -->
+    <p>
+      COUNTER APP 3 // with Arrguments
+      <br>
+      {{argCounter}}
+      <br>
+      <button v-on:click="incArgCounter(10)">Add 10</button>
+    </p>
+
+    <!-- * using native EVENT object -->
+    <h2> Use Native Event Object 1 </h2>
+    <div>
+      ENTER YOUR NAME
+      <input type="text" v-on:input="updateName1">
+    </div>
+    <p> Your Name is : {{name1}} </p>
+    <hr>
+
+    <h2> Use Native Event Object 2 </h2>
+    <div>
+      ENTER YOUR NAME
+      <input type="text" v-on:input="updateName2($event,'HEY !')">
+    </div>
+    <p> Your Name is : {{name2}} </p>
+    <hr>
+
+    <h2> Event Modifier </h2>
+
+    <form v-on:submit.prevent="fireAlert">
+      <input type="text">
+      <button>send</button>
+    </form>
+    <hr>
+    <h2>Event Modifier Right Click</h2>
+    <button v-on:click.right="rightButton++"> Right Click to INC </button>
+    <p>{{rightButton}}</p>
+
+    <hr>
+
+    <h2>KeyBoard Event Modifiers</h2>
+    <input v-on:keyup.enter="enterKey" type="text">
+    <p>press Enter to see ur name here : {{confirmedName}} </p>
+
+    <hr>
+    <h2>V-once</h2>
+    <p v-once>Intitial Value = {{onceCounter}}</p>
+    <p>Increased Value = {{onceCounter}}</p>
+    <button v-on:click="onceCounter++">INCREASE by +1 </button>
+
+    <hr>
+
+    <h2>SET & RESET NAME</h2>
+    <!-- * 109 , 110 will do same thing -->
+    <!-- <input v-bind:value="setName" v-on:input="setNameFunc" type="text"> -->
+    <!-- * v-model = v-bind + v-on:input -->
+    <input v-model="setName" type="text">
+    <p>Your name is : {{setName}}</p>
+    <button v-on:click="resetName">RESET NAME</button>
+
+
+    <!-- * Computed Properties -->
+    <h2>Computed Properties</h2>
+    <div>
+      ENTER YOUR NAME
+      <input type="text" v-model="computedName">
+    </div>
+    <p> Your Name is : {{computedFullName}} </p>
+    <hr>
+
+      <!-- * W ATCHER Properties -->
+      <h2>Watcher Properties</h2>
+      <div>
+        <input type="text" placeholder="Enter First Name" v-model="watcherName">
+        <br>
+        <br>
+        <input type="text" placeholder="Enter Last Name" v-model="watcherLastName">
+      </div>
+      <p> Your Name is : {{watcherFullName}} </p>
+      <hr>
+  </section>
+</body>
+
+</html>

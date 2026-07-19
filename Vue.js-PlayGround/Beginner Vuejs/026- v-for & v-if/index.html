@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.JS</title>
+</head>
+
+<style>
+
+</style>
+
+
+<body>
+    <div id="app">
+
+        <div style="padding: 10px;border: 1px solid red;">
+            <!-- 
+                * v-for , v-if => can be in the same tag
+             -->
+            <div v-for="(user , index) in userInfo" v-if="user.age > 10">
+                <span>Name : {{user.name}} , Age : {{user.age}} , address : {{user.address}}
+                    <br>
+                    <br>
+                    <button @click="deleteItem(index)"> DELETE THIS </button>
+                    <hr>
+                </span>
+
+            </div>
+        </div>
+
+    </div>
+
+
+
+    <!-- LOCAL FILE -->
+    <script src="vue.js"></script>
+
+    <!-- main.js -->
+    <script src="main.js"></script>
+</body>
+
+</html>

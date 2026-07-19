@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.JS</title>
+</head>
+
+<body>
+    <div id="app">
+
+        <!-- if need to render HTML -->
+        <div v-html="msg"> </div>
+        	
+        <!-- give dynamic id -->
+        <h1 v-bind:id="dynamicID" v-html="name" > </h1>
+
+        <!-- dynamic id + javascript -->
+        <h1 v-bind:id="'test' + dynamicID " > {{name}} from vue dynamicid + javascript </h1>
+
+        <!-- javascript in Html -->
+        <h3> {{5+5+5+5}} </h3>
+
+        <!-- javascript in html with vars -->
+        <h3> {{x*y}} </h3>
+
+        <!-- functions -->
+        <h3> {{multiply()}} </h3>
+    </div>
+
+
+
+    <!-- LOCAL FILE -->
+    <script src="vue.js"></script>
+
+    <!-- main.js -->
+    <script src="main.js"></script>
+</body>
+
+</html>

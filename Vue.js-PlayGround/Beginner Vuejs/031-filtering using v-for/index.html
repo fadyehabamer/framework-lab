@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.JS</title>
+</head>
+
+<style>
+
+</style>
+
+<body>
+    <div id="app">
+        <!-- 
+            * you can write function with v-for
+            * or use button to perform function
+         -->
+        <div style="border: 1px solid red; padding: 10px; margin-bottom: 10px;">
+            <ul>
+                <!-- <li v-for="number in evenNumbers()"> {{number}} </li> -->
+                <li v-for="number in numbers"> {{number}} </li>
+            </ul>
+
+            <button @click="evenNumbers"> Even Numbers </button>
+        </div>
+
+        <div style="border: 1px solid red; padding: 10px;">
+            <ul>
+                <li v-for="user in usersOverAge()">Name : {{user.name}} <br> Age : {{user.age}}
+                    <hr>
+                </li>
+            </ul>
+        </div>
+
+
+        <div style="border: 1px solid red; padding: 10px; margin-top: 10px;">
+
+            <label> search for users (karem , fady , ahmed , mohamed) </label>
+            <input type="text" v-model="searchname">
+            <ul>
+                <li v-for="user in searchusersname()">Name : {{user.name}} <br> Age : {{user.age}}
+                    <hr>
+                </li>
+
+            </ul>
+        
+        </div>
+
+
+       
+
+    </div>
+
+
+
+    <!-- LOCAL FILE -->
+    <script src="vue.js"></script>
+
+    <!-- main.js -->
+    <script src="main.js"></script>
+</body>
+
+</html>

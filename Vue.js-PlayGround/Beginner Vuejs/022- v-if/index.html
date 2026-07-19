@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.JS</title>
+</head>
+
+<style>
+
+</style>
+
+
+<body>
+    <div id="app">
+        <!-- 
+            * if active is true -> div will be displayed as block
+            * if active is false -> div will literally disappered from DOM
+         -->
+        <div v-if="active"> This text will be show if active is true [ if usage ] </div>
+
+        <!-- 
+            * v-else  === v-else="!active"
+         -->
+        <div v-else >This text will be show if active is false [ else usage ]  </div>
+        <button @click="active = !active" > Toggle </button>
+
+
+        <br>
+        <br>
+
+        <!-- 
+            * v-if / v-else-if / v-else 
+            * if (count < 0) -> show smaller than 0
+            * else-if (count > 5) ->  bigger than 5
+            * else ->  it is between 0 and 3 
+        -->
+
+            <button @click=" count++"> increase count</button>
+            <div v-text="count"></div>
+            <button @click= " count-- "> decrease count </button>
+        
+
+        <div v-if="count < 0" > 
+            smaller than 0
+        </div>
+
+        <div v-else-if="count > 5" > 
+            bigger than 5
+        </div>
+
+        <div v-else > 
+            between 0 and 5 or greater than 5
+        </div>
+        
+    
+    </div>
+
+
+
+    <!-- LOCAL FILE -->
+    <script src="vue.js"></script>
+
+    <!-- main.js -->
+    <script src="main.js"></script>
+</body>
+
+</html>

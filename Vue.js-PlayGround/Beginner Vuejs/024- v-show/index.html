@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.JS</title>
+</head>
+
+<style>
+
+</style>
+
+
+<body>
+    <div id="app">
+        <!-- 
+            * v-if (false) -> DELETE element from DOM
+            * V-show (false) -> display none for element
+         -->
+
+         <!-- 
+             does not have else like in v-if
+          -->
+        <div v-show="active"> SHOW Div active TRUE </div>
+        <div v-show="!active"> SHOW Div active FALSE </div>
+
+        <button @click="active = !active" > toggle active </button>
+    </div>
+
+
+
+    <!-- LOCAL FILE -->
+    <script src="vue.js"></script>
+
+    <!-- main.js -->
+    <script src="main.js"></script>
+</body>
+
+</html>

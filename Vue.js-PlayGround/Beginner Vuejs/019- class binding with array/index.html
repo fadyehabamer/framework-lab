@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.JS</title>
+</head>
+
+<style>
+    .rect {
+        width: 100px;
+        height: 100px;
+    }
+
+    .red {
+        background-color: red;
+    }
+
+    .blue {
+        background-color: blue;
+    }
+    .has-border{
+        border: 2px solid black;
+    }
+    .active{
+        width: 300px;
+    }
+    .enabled{
+        background-color: green;
+    }
+    .margin{
+        margin-top: 40px;
+    }
+</style>
+
+
+<body>
+    <div id="app">
+     <!-- 
+         * add multiple classes using binding in array
+         * with qoutes or double quotes if you need to add css classes directly
+         * objects 
+         * variables with object
+      -->
+      <div class="rect" :class="[classname , 'has-border' , { 'active':true,'enabled':false } , margin ]" >   </div>
+    </div>
+
+
+
+    <!-- LOCAL FILE -->
+    <script src="vue.js"></script>
+
+    <!-- main.js -->
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://unpkg.com/todomvc-app-css@2.1.0/index.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+    <title>Vue.JS</title>
+</head>
+
+<style>
+
+</style>
+
+<body>
+    <div id="app">
+        <section class="todoapp">
+            <header class="header">
+                <h1>Todos</h1>
+                <input class="new-todo" v-model="newTodo" @keyup.enter="addTodo" autocomplete="off"
+                    placeholder="What needs to be done?">
+            </header>
+            <section class="main">
+                <ul class="todo-list">
+                    <li class="todo" v-for="todo in filteredTodos" :class="{completed:todo.completed}">
+                        <div class="view">
+                            <input class="toggle" type="checkbox" v-model="todo.completed">
+                            <label>{{todo.title}}</label>
+                            <button class="destroy" @click="deleteTodo(todo)"></button>
+                        </div>
+                        <input class="edit" type="text">
+                    </li>
+                </ul>
+            </section>
+            <footer class="footer">
+                <span class="todo-count">
+                    <strong>1</strong> item left
+                </span>
+                <ul class="filters">
+                    <li>
+                        <a href="#" @click.prevent="visability='all'" :class="{selected:visability=='all'}">All</a>
+                    </li>
+                    <li>
+                        <a href="#" @click="visability='active'" :class="{selected:visability=='active'}">Active</a>
+                    </li>
+                    <li>
+                        <a href="#" @click="visability='completed'" :class="{selected:visability=='completed'}">
+                            Completed</a>
+                    </li>
+                </ul>
+                <button class="clear-completed">
+                    Clear completed
+                </button>
+            </footer>
+        </section>
+
+    </div>
+
+
+
+    <!-- LOCAL FILE -->
+    <script src="vue.js"></script>
+
+    <!-- main.js -->
+    <script src="main.js"></script>
+</body>
+
+</html>

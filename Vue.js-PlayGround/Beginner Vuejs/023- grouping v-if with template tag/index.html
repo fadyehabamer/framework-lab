@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.JS</title>
+</head>
+
+<style>
+
+</style>
+
+
+<body>
+    <div id="app">
+
+        <!-- 
+            * if !active parent will be deleted
+            * if active parent will be exist
+         -->
+        <div class="parent" v-if="active">
+            <div>Div 1</div>
+            <div>Div 2</div>
+            <div>Div 3</div>
+        </div>
+        <br>
+        <button @click="active = !active" > Toggle</button>
+    
+        <br>
+        <br>
+
+
+
+        <!-- 
+            * Grouping LOGICALLy (No Parent in HTML)
+         -->
+        <template v-if="activetemp" >
+            <div>Div 1</div>
+            <div>Div 2</div>
+            <div>Div 3</div>
+        </template>
+        <br>
+        <button @click="activetemp = !activetemp" > Toggle</button>
+    </div>
+
+
+
+    <!-- LOCAL FILE -->
+    <script src="vue.js"></script>
+
+    <!-- main.js -->
+    <script src="main.js"></script>
+</body>
+
+</html>

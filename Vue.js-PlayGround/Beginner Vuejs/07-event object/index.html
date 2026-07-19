@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue.JS</title>
+</head>
+
+<body>
+    <div id="app">
+
+        <!-- this way if you need to pass parameters -->
+        <!-- <button v-on:click="showObj($event)"> click me to show Info of coordinates and obj </button> -->
+        
+        <!-- this way if you dont need to pass parameters -->
+        <button v-on:click="showObj"> click me to show Info of coordinates and obj </button>
+
+        <br>
+        x = {{x}} <br>
+        Y = {{y}} <br>
+        Type = {{type}}
+
+    </div>
+
+
+
+    <!-- LOCAL FILE -->
+    <script src="vue.js"></script>
+
+    <!-- main.js -->
+    <script src="main.vue"></script>
+</body>
+
+</html>
