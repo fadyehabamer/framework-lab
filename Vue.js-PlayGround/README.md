@@ -35,6 +35,16 @@ cd framework-lab/Vue.js-PlayGround
 # then open index.html in your browser
 ```
 
+The two build-step apps, `Advanced Vuejs/09-Vue CLI/vue-first-app` and
+`Advanced Vuejs/Friend List`, use Vite (Node.js 20.19+ or 22.12+):
+
+```bash
+npm install
+npm run dev     # dev server
+npm run build   # production build into dist/
+npm run lint    # ESLint
+```
+
 **Topics:** `vuejs` `crash-course` `vue`
 
 ---
